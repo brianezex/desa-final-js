@@ -1,0 +1,27 @@
+.flexcol {
+display: flex;
+@include p-text {
+    flex-direction: column;
+}
+flex-wrap: wrap;
+@include marg-pad;
+> div {
+    @extend .text-box;
+    @include p-text {
+        width: 100%;
+    }
+};
+> iframe {
+    @extend .text-box;
+
+}
+}
+
+.text-box {
+    width: 50%;
+    height: auto;
+    @include p-text {
+        width: 100%;
+    }
+}
+

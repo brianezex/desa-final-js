@@ -1,0 +1,31 @@
+
+@mixin logo-sm {
+    @media  (max-width: 500px) {
+        @content
+    }
+};
+
+@mixin logo-md {
+    @media  (max-width: 1220px) {
+        @content
+    }
+};
+
+@mixin p-text {
+    @media  (max-width: 768px) {
+        @content
+    }
+};
+
+@mixin img {
+    @media (max-width: 1050px){
+        @content
+    }
+};
+
+@mixin sm-screen {
+    @media (max-width:350px) {
+        @content
+    }
+    
+}

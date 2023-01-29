@@ -1,0 +1,262 @@
+body {
+  background-image: url(../src/background.jpg);
+  background-attachment: fixed;
+}
+
+h1 {
+  @include title(2.5rem, white, $color-gray);
+  @include marg-pad;
+  @include shadow;
+  @include logo-sm {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  @include title(2rem, white, $color-gray);
+  @include marg-pad;
+  @include shadow;
+  @include logo-sm {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  @include title(2rem, $color-black, $color-white);
+  text-align: left;
+}
+
+
+.box {
+  width: 30%;
+  height: auto;
+  border: solid black;
+  border-radius: 10%;
+  text-align: center;
+  @include marg-pad;
+}
+
+legend {
+  @include title(2rem, $color-white, $color-black);
+  @include sm-screen {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-family: map-get($map: $varFonts, $key: "tiro");
+  @include text(1.5rem, 200);
+  @include p-text {
+  @include text(1.2rem, 200);
+  }
+  @include sm-screen {
+    @include text (1rem, 200)
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+img {
+  border-radius: 15%;
+}
+
+iframe {
+  border-radius: 15%;
+}
+
+/* Fin etiquetas principales */
+
+/* inicio clases y IDs */
+.admin {
+border-top: 5px solid black;
+}
+.boxVideo {
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 1%;
+  padding: 1%;
+  border: solid black;
+  border-radius: 10%;
+}
+
+.cajaMain {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 2%;
+}
+
+.photoBox {
+  width: 30%;
+  height: auto;
+  max-width: 500px;
+  max-height: auto;
+  margin: 2%;
+  padding: 1%;
+}
+
+.reduceFooter {
+  width: 25%;
+  height: auto;
+  min-width: 150px;
+  margin: 1%;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footerNav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.socialBox {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-end;
+  margin: 1%;
+}
+
+.social {
+  width: 50%;
+  height: auto;
+}
+
+.headerBox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.reduceLogo {
+  max-width: 350px;
+  max-height: 200px;
+  border-radius: 10%;
+  @include logo-md {
+    max-width: 200px;
+  }
+  @include logo-sm {
+    max-width: 150px;
+  }
+  @include sm-screen {
+    max-width: 100px;
+  }
+}
+
+.nav-link{
+  @include shadow;
+}
+
+.bg-logoInmb {
+  background-color: rgb(255, 255, 255);
+  padding: 2%;
+  border-radius: 2%;
+}
+
+.bg-form {
+  background-image: url(../src/casa.svg);
+  background-repeat: space; 
+}
+
+.mapMod {
+  margin: 3%;
+}
+
+.bg-footer {
+  background-color: $color-black-light;
+  & section {
+    & p {
+      font-family: map-get($map: $varFonts, $key: "edu");
+      @include shadow; 
+    }
+  }
+  & div {
+    font-family: map-get($map: $varFonts, $key: "edu");
+  }
+}
+
+.bg-light-copy {
+  background-color: $color-black;
+}
+
+.bg-light-form {
+  background-color: $color-green-light;
+}
+
+.bg-btn {
+  background-color: $color-gray;
+}
+
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexCheck {
+  display: flex;
+  flex-direction: column;
+}
+.fit-img {
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.bg-copy {
+  background-color: $color-black-light;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include p-text {
+    width: fit-content;
+  }
+  > div {
+    @extend .scale;
+  }
+  }
+
+.checkBox {
+  width: 20%;
+  & input {
+    @include marg-pad;
+  }
+  & label {
+    margin-left: 20px;
+  }
+  @include logo-sm {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.reduceImg {
+  @include img {
+  width: 250px;
+  @include p-text {
+    width: 100px;
+  }
+  }
+}
